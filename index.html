@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Auto Respawn Script - rip_script843</title>
+    <style>
+        :root {
+            --primary: #00ff88;
+            --secondary: #00ccff;
+            --dark: #0a0a1a;
+            --darker: #050510;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: white;
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid var(--primary);
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.2);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: rgba(30, 30, 46, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .card h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .code-box {
+            background: #1a1a2e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            overflow-x: auto;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+        
+        pre {
+            color: var(--primary);
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: black;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+        }
+        
+        .btn-copy {
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            margin-top: 15px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-list li::before {
+            content: "✅";
+            color: var(--primary);
+        }
+        
+        .step {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: var(--primary);
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .warning {
+            background: rgba(255, 50, 50, 0.1);
+            border-left: 4px solid #ff3333;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .card {
+                padding: 15px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-bolt"></i> AUTO RESPAWN SCRIPT</h1>
+            <p>🔥 Dành riêng cho: <strong>rip_script843</strong> 🔥</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Hosted on GitHub Pages | Auto-updating
+            </p>
+        </div>
+        
+        <!-- Card 1: Script Code -->
+        <div class="card">
+            <h2><i class="fas fa-code"></i> SCRIPT CHÍNH</h2>
+            <p>Copy toàn bộ code dưới đây và paste vào Delta Executor:</p>
+            
+            <div class="code-box">
+                <pre id="scriptCode">-- 🎯 AUTO RESPAWN AT DEATH - rip_script843
+-- Website: https://yul292.github.io/cautious-doodle/
+
+local webURL = "https://yul292.github.io/cautious-doodle/script.lua"
+
+print("========================================")
+print("🎯 AUTO RESPAWN SYSTEM v3.0")
+print("👤 Player: rip_script843")
+print("🌐 Loading from GitHub...")
+print("========================================")
+
+-- Tải script từ web
+local success, err = pcall(function()
+    local scriptContent = game:HttpGet(webURL)
+    loadstring(scriptContent)()
+end)
+
+if success then
+    print("✅ Tải thành công!")
+    print("🔥 Hệ thống đang hoạt động...")
+    print("💀 Chết ở đâu → Spawn ở đó")
+else
+    warn("❌ Lỗi: " .. err)
+    print("🔄 Sử dụng script dự phòng...")
+    loadstring(game:HttpGet("https://pastebin.com/raw/hQLWaCQd"))()
+end</pre>
+            </div>
+            
+            <button class="btn btn-copy" onclick="copyScript()">
+                <i class="fas fa-copy"></i> COPY TOÀN BỘ SCRIPT
+            </button>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                Click nút trên hoặc click vào code box để copy
+            </p>
+        </div>
+        
+        <!-- Card 2: Hướng dẫn -->
+        <div class="card">
+            <h2><i class="fas fa-gamepad"></i> HƯỚNG DẪN SỬ DỤNG</h2>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                <strong>Mở Roblox Game</strong>
+                <p>Vào game bất kỳ bạn muốn chơi</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">2</span>
+                <strong>Mở Delta Executor</strong>
+                <p>Inject Delta vào Roblox</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                <strong>Copy & Paste</strong>
+                <p>Copy script trên và paste vào Delta</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">4</span>
+                <strong>Execute Script</strong>
+                <p>Nhấn Execute/Inject trong Delta</p>
+            </div>
+            
+            <div class="step">
+                <span class="step-number">5</span>
+                <strong>Chơi Game</strong>
+                <p>Khi chết sẽ tự động respawn tại chỗ!</p>
+            </div>
+        </div>
+        
+        <!-- Card 3: Tính năng -->
+        <div class="card">
+            <h2><i class="fas fa-star"></i> TÍNH NĂNG</h2>
+            <ul class="feature-list">
+                <li><strong>Auto Respawn:</strong> Chết ở đâu spawn ở đó</li>
+                <li><strong>God Mode:</strong> Bất tử tạm thời sau respawn</li>
+                <li><strong>R6/R15 Support:</strong> Hoạt động với mọi character</li>
+                <li><strong>UI Đẹp:</strong> Giao diện RGB trong game</li>
+                <li><strong>Chống Void:</strong> Tự động teleport khỏi void</li>
+                <li><strong>Hotkeys:</strong> F9 để test, F10 để tắt/mở</li>
+                <li><strong>Tự động fix:</strong> Không bị stuck hay bug</li>
+                <li><strong>Hiệu ứng:</strong> Âm thanh và hình ảnh khi respawn</li>
+            </ul>
+        </div>
+        
+        <!-- Card 4: Lưu ý -->
+        <div class="card">
+            <h2><i class="fas fa-exclamation-triangle"></i> LƯU Ý QUAN TRỌNG</h2>
+            <div class="warning">
+                <p><strong>⚠️ CHỈ DÀNH CHO rip_script843</strong></p>
+                <p>Script chỉ hoạt động với tài khoản của bạn</p>
+            </div>
+            
+            <ul class="feature-list">
+                <li>Luôn test trong game private trước</li>
+                <li>Đảm bảo Delta được inject đúng cách</li>
+                <li>Script tự động update từ web</li>
+                <li>Nếu có lỗi, check F9 Console</li>
+                <li>Không dùng trong game có anti-cheat mạnh</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🔥 Created by: <strong>rip_script843</strong></p>
+            <p>📅 Cập nhật: <span id="currentDate"></span></p>
+            <p>🌐 Repository: <code>yul292/cautious-doodle</code></p>
+            <p style="margin-top: 15px;">
+                <i class="fas fa-heart" style="color: #ff3366;"></i>
+                Dành cho cộng đồng Roblox Việt Nam
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Cập nhật ngày
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('vi-VN');
+        
+        // Copy script function
+        function copyScript() {
+            const code = document.getElementById('scriptCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                alert('✅ Đã copy script thành công!\n\n📋 Bây giờ hãy:\n1. Mở Delta Executor\n2. Paste script vào\n3. Nhấn Execute\n\n🎮 Hệ thống sẽ tự động chạy!');
+            }).catch(err => {
+                alert('❌ Lỗi khi copy: ' + err);
+            });
+        }
+        
+        // Auto-select code khi click
+        const codeBox = document.querySelector('.code-box');
+        codeBox.addEventListener('click', function() {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(document.getElementById('scriptCode'));
+            selection.removeAllRanges();
+            selection.addRange(range);
+            
+            // Copy tự động
+            try {
+                document.execCommand('copy');
+                const btn = codeBox.querySelector('button');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<i class="fas fa-check"></i> ĐÃ COPY!';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                    }, 2000);
+                }
+            } catch (err) {
+                console.log('Copy failed: ', err);
+            }
+        });
+        
+        // Hiệu ứng hover cho code box
+        codeBox.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.3)';
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        codeBox.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+            this.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>
